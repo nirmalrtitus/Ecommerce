@@ -156,7 +156,7 @@
 
     const DEFAULT_SETTINGS = {
         storeName: "Natures Bounty Gourmet",
-        whatsappNumber: "919876543210",
+        whatsappNumber: "9003558781",
         notificationEmail: "orders@dryfruits.example",
         currencySymbol: "₹",
         address: "Suite 104, Gourmet Plaza, Market Road, Mumbai 400001",
