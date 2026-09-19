@@ -1,0 +1,1084 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Natures Bounty | Gourmet Dry Fruits & Nuts Store</title>
+    <meta name="description" content="Premium handcrafted dry fruits, nuts, berries, and luxury gift hampers delivered fresh to your doorstep.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Announcement Bar -->
+    <div id="announcement-bar" class="announcement-bar">
+        <div class="container announcement-content">
+            <span id="announcement-text"><i class="fa-solid fa-sparkles"></i> Free Express Shipping on orders above ₹1,500! Fresh harvest dry fruits delivered worldwide.</span>
+            <div class="announcement-links">
+                <a href="#catalog-section"><i class="fa-solid fa-gift"></i> Festive Offers</a>
+                <button id="admin-trigger-btn" class="btn-text-light"><i class="fa-solid fa-user-gear"></i> Admin Portal</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navigation Header -->
+    <header class="main-header" id="main-header">
+        <div class="container header-container">
+            <a href="#" class="brand-logo">
+                <div class="logo-icon">
+                    <img src="images/logos/logo_icon.png" alt="Natures Bounty Icon" class="logo-img-thumb" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-block';">
+                    <i class="fa-solid fa-seedling" style="display:none;"></i>
+                </div>
+                <div class="brand-text">
+                    <span class="brand-title" id="nav-brand-title">Natures Bounty</span>
+                    <span class="brand-tagline">Gourmet Dry Fruits</span>
+                </div>
+            </a>
+
+            <!-- Search Bar with Autocomplete -->
+            <div class="search-wrapper">
+                <div class="search-input-group">
+                    <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                    <input type="text" id="search-input" placeholder="Search almonds, figs, berries, gift sets..." autocomplete="off">
+                    <button id="clear-search-btn" class="clear-search hidden"><i class="fa-solid fa-xmark"></i></button>
+                </div>
+                <div id="search-autocomplete-dropdown" class="search-dropdown hidden"></div>
+            </div>
+
+            <!-- Header Actions -->
+            <div class="header-actions">
+                <a href="javascript:void(0)" id="whatsapp-quick-link" class="btn-icon-link" target="_blank" title="Contact on WhatsApp">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+                <button id="cart-drawer-trigger" class="cart-btn" aria-label="View Shopping Cart">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <span class="cart-btn-label">Cart</span>
+                    <span id="cart-badge-count" class="cart-badge">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Dedicated Mobile Search Bar (100% Visible on Mobile Devices) -->
+    <div class="mobile-search-bar" id="mobile-search-container">
+        <div class="container">
+            <div class="search-input-group">
+                <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                <input type="text" id="mobile-search-input" placeholder="Search almonds, figs, berries, gift sets..." autocomplete="off">
+                <button id="mobile-clear-search-btn" class="clear-search hidden"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div id="mobile-search-autocomplete-dropdown" class="search-dropdown hidden"></div>
+        </div>
+    </div>
+
+    <!-- Hero Slider Section -->
+    <section class="hero-section" id="hero-section">
+        <div class="slider-container" id="hero-slider-container">
+            <!-- Dynamic Slides inserted by JS -->
+        </div>
+
+        <!-- Slider Controls -->
+        <button id="slider-prev-btn" class="slider-arrow prev-arrow" aria-label="Previous Slide"><i class="fa-solid fa-chevron-left"></i></button>
+        <button id="slider-next-btn" class="slider-arrow next-arrow" aria-label="Next Slide"><i class="fa-solid fa-chevron-right"></i></button>
+        <div id="slider-dots-container" class="slider-dots"></div>
+    </section>
+
+    <!-- Trust Badges Bar -->
+    <section class="trust-bar">
+        <div class="container trust-grid" id="homepage-trust-grid">
+            <!-- Dynamic Trust Badges rendered via JS -->
+        </div>
+    </section>
+
+    <!-- Main Catalog Section -->
+    <main class="container catalog-section" id="catalog-section">
+        
+        <!-- Category Filter Bar -->
+        <div class="catalog-header">
+            <div class="section-title-wrap">
+                <span class="sub-heading">CURATED SELECTION</span>
+                <h2 class="section-title">Explore Our Harvest Catalog</h2>
+            </div>
+            
+            <div class="catalog-controls">
+                <div class="category-pills-scroll" id="category-pills-container">
+                    <!-- Dynamic category pills inserted via JS -->
+                </div>
+                
+                <div class="sort-wrapper">
+                    <label for="sort-select"><i class="fa-solid fa-arrow-down-wide-short"></i> Sort:</label>
+                    <select id="sort-select" class="sort-dropdown">
+                        <option value="popular">Most Popular</option>
+                        <option value="price-low">Price: Low to High</option>
+                        <option value="price-high">Price: High to Low</option>
+                        <option value="name-asc">Name: A to Z</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <!-- Product Grid -->
+        <div id="product-grid" class="product-grid">
+            <!-- Dynamic product cards inserted via JS -->
+        </div>
+
+        <!-- Empty Results State -->
+        <div id="empty-catalog-state" class="empty-state hidden">
+            <div class="empty-icon"><i class="fa-solid fa-basket-shopping"></i></div>
+            <h3>No products found matching your search</h3>
+            <p>Try clearing filters or searching for different keywords like Almonds, Anjeer, or Berries.</p>
+            <button id="reset-catalog-btn" class="btn btn-primary"><i class="fa-solid fa-rotate-left"></i> Reset Search & Filters</button>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container footer-grid">
+            <div class="footer-col brand-col">
+                <div class="brand-logo footer-logo">
+                    <div class="logo-icon">
+                        <img src="images/logos/logo_icon.png" alt="Natures Bounty Icon" class="logo-img-thumb" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-block';">
+                        <i class="fa-solid fa-seedling" style="display:none;"></i>
+                    </div>
+                    <div class="brand-text">
+                        <span class="brand-title" id="footer-brand-title">Natures Bounty</span>
+                        <span class="brand-tagline">Gourmet Dry Fruits</span>
+                    </div>
+                </div>
+                <p id="footer-about-text" class="footer-desc">Crafting healthy lifestyle choices with the world's finest handpicked dry fruits, dates, berries, and artisanal gift boxes.</p>
+                <div class="footer-socials">
+                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" id="footer-whatsapp-link" aria-label="WhatsApp" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="#" aria-label="Pinterest"><i class="fa-brands fa-pinterest"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h4 class="footer-heading">Quick Navigation</h4>
+                <ul class="footer-links">
+                    <li><a href="#hero-section"><i class="fa-solid fa-chevron-right"></i> Home</a></li>
+                    <li><a href="#catalog-section"><i class="fa-solid fa-chevron-right"></i> Product Catalog</a></li>
+                    <li><a href="javascript:void(0)" id="footer-cart-trigger"><i class="fa-solid fa-chevron-right"></i> View Cart</a></li>
+                    <li><a href="javascript:void(0)" id="footer-admin-trigger"><i class="fa-solid fa-chevron-right"></i> Store Owner Portal</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4 class="footer-heading">Product Categories</h4>
+                <ul class="footer-links" id="footer-categories-list">
+                    <!-- Categories inserted dynamically -->
+                </ul>
+            </div>
+
+            <div class="footer-col contact-col">
+                <h4 class="footer-heading">Contact & Store Info</h4>
+                <ul class="footer-contact">
+                    <li>
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span id="footer-address">Suite 104, Gourmet Plaza, Market Road, Mumbai 400001</span>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-phone"></i>
+                        <span id="footer-phone">+91 98765 43210</span>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-envelope"></i>
+                        <span id="footer-email">orders@dryfruits.example</span>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-clock"></i>
+                        <span>Mon - Sat: 9:00 AM - 8:00 PM</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container footer-bottom-content">
+                <p>&copy; <span id="copyright-year">2026</span> <span id="footer-copy-brand">Natures Bounty Gourmet</span>. All Rights Reserved.</p>
+                <div class="footer-badges">
+                    <span><i class="fa-solid fa-shield-heart"></i> 100% Quality Guaranteed</span>
+                    <span><i class="fa-solid fa-truck-ramp-box"></i> Direct Farm Sourced</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- ==================== MODALS & DRAWERS ==================== -->
+
+    <!-- Quick View Product Modal -->
+    <div id="quick-view-modal" class="modal-backdrop hidden" role="dialog" aria-modal="true">
+        <div class="modal-card quick-view-card">
+            <button class="modal-close-btn" id="quick-view-close"><i class="fa-solid fa-xmark"></i></button>
+            <div id="quick-view-content" class="quick-view-grid">
+                <!-- Injected dynamically by JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide-Over Shopping Cart Drawer -->
+    <div id="cart-drawer-backdrop" class="drawer-backdrop hidden"></div>
+    <aside id="cart-drawer" class="cart-drawer" role="dialog" aria-modal="true">
+        <div class="drawer-header">
+            <div class="drawer-title-wrap">
+                <i class="fa-solid fa-bag-shopping"></i>
+                <h3>Your Shopping Bag</h3>
+                <span id="drawer-item-count" class="badge-count">0 items</span>
+            </div>
+            <button id="cart-drawer-close" class="drawer-close-btn"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+
+        <div id="cart-drawer-body" class="drawer-body">
+            <!-- Items rendered dynamically -->
+        </div>
+
+        <div class="drawer-footer">
+            <div class="cart-summary-line">
+                <span>Subtotal</span>
+                <span id="cart-subtotal-val" class="summary-amount">₹0</span>
+            </div>
+            <div class="cart-summary-line shipping-line">
+                <span>Estimated Shipping</span>
+                <span class="free-text">FREE</span>
+            </div>
+            <div class="cart-summary-line grand-total-line">
+                <span>Grand Total</span>
+                <span id="cart-grand-total-val" class="grand-amount">₹0</span>
+            </div>
+
+            <div class="drawer-action-btns">
+                <button id="proceed-checkout-btn" class="btn btn-primary btn-block btn-lg">
+                    <i class="fa-solid fa-check"></i> Proceed to Order / Inquiry
+                </button>
+                <button id="clear-cart-btn" class="btn btn-ghost btn-block">
+                    <i class="fa-solid fa-trash-can"></i> Empty Bag
+                </button>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Checkout / Inquiry Modal -->
+    <div id="checkout-modal" class="modal-backdrop hidden" role="dialog" aria-modal="true">
+        <div class="modal-card checkout-card">
+            <button class="modal-close-btn" id="checkout-close-btn"><i class="fa-solid fa-xmark"></i></button>
+            
+            <div class="modal-header-wrap">
+                <div class="modal-icon-header"><i class="fa-solid fa-paper-plane"></i></div>
+                <h3>Complete Your Order Inquiry</h3>
+                <p>Provide your delivery details below to generate instant WhatsApp order message or email inquiry.</p>
+            </div>
+
+            <div class="checkout-grid">
+                <!-- Form Column -->
+                <form id="checkout-form" class="checkout-form">
+                    <div class="form-group">
+                        <label for="cust-name"><i class="fa-solid fa-user"></i> Full Name *</label>
+                        <input type="text" id="cust-name" required placeholder="e.g. Rahul Sharma">
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="cust-phone"><i class="fa-solid fa-phone"></i> WhatsApp Phone Number *</label>
+                            <input type="tel" id="cust-phone" required placeholder="e.g. +91 9876543210">
+                        </div>
+                        <div class="form-group">
+                            <label for="cust-email"><i class="fa-solid fa-envelope"></i> Email Address *</label>
+                            <input type="email" id="cust-email" required placeholder="e.g. name@example.com">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="cust-address"><i class="fa-solid fa-location-dot"></i> Delivery Address & City *</label>
+                        <textarea id="cust-address" rows="2" required placeholder="Flat/House No., Street, Landmark, City, Pincode"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="cust-notes"><i class="fa-solid fa-note-sticky"></i> Order Notes / Gift Message (Optional)</label>
+                        <input type="text" id="cust-notes" placeholder="e.g. Gift packing needed, call before delivery">
+                    </div>
+
+                    <!-- Checkout Dual Action Buttons -->
+                    <div class="checkout-actions">
+                        <button type="button" id="submit-whatsapp-btn" class="btn btn-whatsapp btn-lg">
+                            <i class="fa-brands fa-whatsapp"></i> Order via WhatsApp
+                        </button>
+                        <button type="button" id="submit-email-btn" class="btn btn-email btn-lg">
+                            <i class="fa-solid fa-envelope"></i> Send Email Inquiry
+                        </button>
+                    </div>
+                </form>
+
+                <!-- Order Review Mini Column -->
+                <div class="checkout-summary-box">
+                    <h4>Order Breakdown</h4>
+                    <div id="checkout-items-list" class="checkout-items-scroll">
+                        <!-- Items list -->
+                    </div>
+                    <div class="checkout-total-box">
+                        <span>Total Amount:</span>
+                        <strong id="checkout-total-val">₹0</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ==================== ADMIN PORTAL MODALS ==================== -->
+
+    <!-- Admin Master Modal (Handles Auth & Dashboard) -->
+    <div id="admin-modal" class="modal-backdrop hidden" role="dialog" aria-modal="true">
+        <div class="modal-card admin-card">
+            <button class="modal-close-btn" id="admin-close-btn"><i class="fa-solid fa-xmark"></i></button>
+
+            <!-- Admin Authentication View -->
+            <div id="admin-auth-view" class="admin-auth-box">
+                <div class="auth-header">
+                    <div class="auth-icon"><i class="fa-solid fa-lock"></i></div>
+                    <h2>Store Management Portal</h2>
+                    <p>Protected Admin Control Panel. Enter master credentials to continue.</p>
+                </div>
+
+                <form id="admin-login-form" class="auth-form">
+                    <div class="form-group">
+                        <label for="admin-user"><i class="fa-solid fa-user-shield"></i> Username</label>
+                        <input type="text" id="admin-user" required autocomplete="username" placeholder="Enter admin username">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="admin-pass"><i class="fa-solid fa-key"></i> Master Password</label>
+                        <input type="password" id="admin-pass" required autocomplete="current-password" placeholder="Enter master password">
+                    </div>
+
+                    <div id="auth-error-msg" class="auth-error hidden">
+                        <i class="fa-solid fa-triangle-exclamation"></i> <span id="auth-error-text">Invalid credentials</span>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-block btn-lg">
+                        <i class="fa-solid fa-right-to-bracket"></i> Authenticate & Enter Dashboard
+                    </button>
+                </form>
+
+                <div class="auth-hint">
+                    <p><i class="fa-solid fa-circle-info"></i> Security Note: Passwords are validated using client-side salted SHA-256 Web Crypto hashing.</p>
+                </div>
+            </div>
+
+            <!-- Admin Dashboard View -->
+            <div id="admin-dashboard-view" class="admin-dashboard-box hidden">
+                
+                <!-- Dashboard Header -->
+                <div class="admin-header-bar">
+                    <div class="admin-title">
+                        <i class="fa-solid fa-gauge-high"></i>
+                        <div>
+                            <h3>Store Owner Control Panel</h3>
+                            <span class="session-badge"><i class="fa-solid fa-shield-check"></i> Authenticated Admin Session</span>
+                        </div>
+                    </div>
+                    <div class="admin-header-actions">
+                        <button id="admin-logout-btn" class="btn btn-outline-danger">
+                            <i class="fa-solid fa-right-from-bracket"></i> Logout
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Admin Tabs Nav -->
+                <nav class="admin-tabs">
+                    <button class="admin-tab-btn active" data-tab="tab-products">
+                        <i class="fa-solid fa-box-open"></i> Products
+                    </button>
+                    <button class="admin-tab-btn" data-tab="tab-categories">
+                        <i class="fa-solid fa-tags"></i> Categories
+                    </button>
+                    <button class="admin-tab-btn" data-tab="tab-slides">
+                        <i class="fa-solid fa-images"></i> Hero Slider
+                    </button>
+                    <button class="admin-tab-btn" data-tab="tab-gallery">
+                        <i class="fa-solid fa-photo-film"></i> Image Gallery
+                    </button>
+                    <button class="admin-tab-btn" data-tab="tab-settings">
+                        <i class="fa-solid fa-sliders"></i> Site Settings
+                    </button>
+                    <button class="admin-tab-btn" data-tab="tab-inquiries">
+                        <i class="fa-solid fa-clipboard-list"></i> Inquiries & Orders
+                        <span id="admin-inquiries-badge" class="inquiries-badge">0</span>
+                    </button>
+                </nav>
+
+                <!-- Admin Tab Contents -->
+                <div class="admin-tab-body">
+
+                    <!-- TAB 1: Products Management -->
+                    <div id="tab-products" class="tab-pane active">
+                        <div class="pane-action-bar">
+                            <div class="search-filter-wrap">
+                                <input type="text" id="admin-prod-search" placeholder="Search products by title or category..." class="admin-search-input">
+                            </div>
+                            <button id="add-product-btn" class="btn btn-success">
+                                <i class="fa-solid fa-plus"></i> Add New Product
+                            </button>
+                        </div>
+
+                        <div class="table-responsive">
+                            <table class="admin-table">
+                                <thead>
+                                    <tr>
+                                        <th>Image</th>
+                                        <th>Product Title</th>
+                                        <th>Category</th>
+                                        <th>Base Price / Weight</th>
+                                        <th>Stock Status</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="admin-products-table-body">
+                                    <!-- Injected via JS -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- TAB 2: Category Management -->
+                    <div id="tab-categories" class="tab-pane">
+                        <div class="category-admin-grid">
+                            <!-- Category Form -->
+                            <div class="admin-card-inner">
+                                <h4 id="cat-form-title"><i class="fa-solid fa-folder-plus"></i> Add New Category</h4>
+                                <form id="admin-cat-form">
+                                    <input type="hidden" id="cat-edit-id">
+                                    <div class="form-group">
+                                        <label for="cat-name">Category Name *</label>
+                                        <input type="text" id="cat-name" required placeholder="e.g. Superfood Seeds">
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="label-with-preview">
+                                            <label for="cat-icon">Category Icon (Select from options) *</label>
+                                            <span id="cat-icon-live-badge" class="badge-tag"><i class="fa-solid fa-seedling" id="cat-icon-live-preview"></i> Preview</span>
+                                        </div>
+                                        <select id="cat-icon" required class="sort-dropdown width-full">
+                                            <option value="fa-seedling" selected>🌱 Seedling / Nuts (fa-seedling)</option>
+                                            <option value="fa-apple-whole">🍎 Whole Fruits & Berries (fa-apple-whole)</option>
+                                            <option value="fa-sun">☀️ Sun-Dried Exotic Fruits (fa-sun)</option>
+                                            <option value="fa-gift">🎁 Festive Gift Packs (fa-gift)</option>
+                                            <option value="fa-leaf">🍃 Organic & Natural (fa-leaf)</option>
+                                            <option value="fa-bowl-food">🥣 Gourmet Bowls & Mixes (fa-bowl-food)</option>
+                                            <option value="fa-wheat-awn">🌾 Harvest & Grains (fa-wheat-awn)</option>
+                                            <option value="fa-pepper-hot">🌶️ Spices & Seasonings (fa-pepper-hot)</option>
+                                            <option value="fa-box-tissue">📦 Luxury Gift Boxes (fa-box-tissue)</option>
+                                            <option value="fa-basket-shopping">🧺 Shopping Basket (fa-basket-shopping)</option>
+                                            <option value="fa-crown">👑 Royal & Premium (fa-crown)</option>
+                                            <option value="fa-star">⭐ Bestsellers & Specials (fa-star)</option>
+                                            <option value="fa-heart">❤️ Healthy Choice (fa-heart)</option>
+                                            <option value="fa-fire">🔥 Roasted & Toasted (fa-fire)</option>
+                                            <option value="fa-sparkles">✨ Artisanal Special (fa-sparkles)</option>
+                                            <option value="fa-store">🏪 Store Specialty (fa-store)</option>
+                                        </select>
+                                    </div>
+                                    <!-- Visual Icon Picker Grid -->
+                                    <div class="form-group">
+                                        <label class="form-help-label">Quick Choose Icon:</label>
+                                        <div class="icon-picker-grid" id="icon-picker-grid">
+                                            <button type="button" class="icon-tile active" data-icon="fa-seedling" title="fa-seedling"><i class="fa-solid fa-seedling"></i></button>
+                                            <button type="button" class="icon-tile" data-icon="fa-apple-whole" title="fa-apple-whole"><i class="fa-solid fa-apple-whole"></i></button>
+                                            <button type="button" class="icon-tile" data-icon="fa-sun" title="fa-sun"><i class="fa-solid fa-sun"></i></button>
+                                            <button type="button" class="icon-tile" data-icon="fa-gift" title="fa-gift"><i class="fa-solid fa-gift"></i></button>
+                                            <button type="button" class="icon-tile" data-icon="fa-leaf" title="fa-leaf"><i class="fa-solid fa-leaf"></i></button>
+                                            <button type="button" class="icon-tile" data-icon="fa-bowl-food" title="fa-bowl-food"><i class="fa-solid fa-bowl-food"></i></button>
+                                            <button type="button" class="icon-tile" data-icon="fa-wheat-awn" title="fa-wheat-awn"><i class="fa-solid fa-wheat-awn"></i></button>
+                                            <button type="button" class="icon-tile" data-icon="fa-pepper-hot" title="fa-pepper-hot"><i class="fa-solid fa-pepper-hot"></i></button>
+                                            <button type="button" class="icon-tile" data-icon="fa-box-tissue" title="fa-box-tissue"><i class="fa-solid fa-box-tissue"></i></button>
+                                            <button type="button" class="icon-tile" data-icon="fa-basket-shopping" title="fa-basket-shopping"><i class="fa-solid fa-basket-shopping"></i></button>
+                                            <button type="button" class="icon-tile" data-icon="fa-crown" title="fa-crown"><i class="fa-solid fa-crown"></i></button>
+                                            <button type="button" class="icon-tile" data-icon="fa-star" title="fa-star"><i class="fa-solid fa-star"></i></button>
+                                            <button type="button" class="icon-tile" data-icon="fa-heart" title="fa-heart"><i class="fa-solid fa-heart"></i></button>
+                                            <button type="button" class="icon-tile" data-icon="fa-fire" title="fa-fire"><i class="fa-solid fa-fire"></i></button>
+                                            <button type="button" class="icon-tile" data-icon="fa-sparkles" title="fa-sparkles"><i class="fa-solid fa-sparkles"></i></button>
+                                            <button type="button" class="icon-tile" data-icon="fa-store" title="fa-store"><i class="fa-solid fa-store"></i></button>
+                                        </div>
+                                    </div>
+                                    <div class="form-actions">
+                                        <button type="submit" class="btn btn-primary"><i class="fa-solid fa-floppy-disk"></i> Save Category</button>
+                                        <button type="button" id="cat-reset-btn" class="btn btn-ghost hidden">Cancel</button>
+                                    </div>
+                                </form>
+                            </div>
+
+                            <!-- Categories Table -->
+                            <div class="admin-card-inner">
+                                <h4><i class="fa-solid fa-list"></i> Existing Categories</h4>
+                                <table class="admin-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Icon</th>
+                                            <th>Category Name</th>
+                                            <th>Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="admin-categories-table-body">
+                                        <!-- Injected via JS -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- TAB 3: Hero Slider Customizer -->
+                    <div id="tab-slides" class="tab-pane">
+                        <div class="pane-action-bar">
+                            <h4>Hero Carousel Slide Manager</h4>
+                            <button id="add-slide-btn" class="btn btn-success">
+                                <i class="fa-solid fa-plus"></i> Add New Slide
+                            </button>
+                        </div>
+                        <div id="admin-slides-grid" class="admin-slides-grid">
+                            <!-- Injected via JS -->
+                        </div>
+                    </div>
+
+                    <!-- TAB 4: Site Settings & UI Customizer -->
+                    <div id="tab-settings" class="tab-pane">
+                        <form id="admin-settings-form" class="settings-form-grid">
+                            <div class="admin-card-inner">
+                                <h4><i class="fa-solid fa-store"></i> Store Identity & Branding</h4>
+                                <div class="form-group">
+                                    <label for="set-store-name">Store Name</label>
+                                    <input type="text" id="set-store-name" required placeholder="Natures Bounty Gourmet">
+                                </div>
+                                <div class="form-group">
+                                    <label for="set-currency">Currency Symbol</label>
+                                    <input type="text" id="set-currency" required placeholder="e.g. ₹">
+                                </div>
+                                <div class="form-group">
+                                    <label for="set-announcement">Top Announcement Bar Text</label>
+                                    <textarea id="set-announcement" rows="2" required></textarea>
+                                </div>
+
+                                <!-- Logo Management & Live View Option -->
+                                <div class="form-group logo-management-card" style="margin-top: 1rem; border-top: 1px solid var(--color-border); padding-top: 1rem;">
+                                    <label><i class="fa-solid fa-image"></i> Store Brand Logo Assets & Preview</label>
+                                    
+                                    <!-- Logo Live Previews -->
+                                    <div class="logo-preview-box">
+                                        <div class="logo-preview-item">
+                                            <span class="preview-label">Icon Emblem:</span>
+                                            <div class="logo-circle-wrap">
+                                                <img id="set-logo-icon-preview" src="images/logos/logo_icon.png" alt="Logo Icon Emblem" onerror="this.src='images/logos/logo_icon.png'">
+                                            </div>
+                                        </div>
+                                        <div class="logo-preview-item">
+                                            <span class="preview-label">Full Logo Banner:</span>
+                                            <div class="logo-banner-wrap">
+                                                <img id="set-logo-full-preview" src="images/logos/logo.png" alt="Full Store Logo" onerror="this.src='images/logos/logo.png'">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Upload & Path Options -->
+                                    <div class="logo-upload-controls" style="margin-top: 0.85rem;">
+                                        <div class="upload-dropzone" id="logo-dropzone" style="padding: 0.75rem;">
+                                            <i class="fa-solid fa-cloud-arrow-up upload-icon" style="font-size: 1.2rem;"></i>
+                                            <div class="upload-text">
+                                                <strong>Click or drag & drop new Logo image</strong>
+                                                <span>Upload PNG, JPG or WEBP logo file</span>
+                                            </div>
+                                            <input type="file" id="set-logo-file" accept="image/*" class="file-input-hidden">
+                                        </div>
+
+                                        <div class="form-group" style="margin-top: 0.75rem;">
+                                            <label for="set-logo-path">Logo File Path or Data URL</label>
+                                            <input type="text" id="set-logo-path" class="width-full" placeholder="images/logos/logo_icon.png" value="images/logos/logo_icon.png">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="admin-card-inner">
+                                <h4><i class="fa-solid fa-headset"></i> Order & Contact Channels</h4>
+                                <div class="form-group">
+                                    <label for="set-whatsapp">WhatsApp Phone Number (India +91) *</label>
+                                    <div class="input-with-prefix">
+                                        <span class="input-prefix">🇮🇳 +91</span>
+                                        <input type="text" id="set-whatsapp" required placeholder="9876543210" maxlength="10" pattern="[0-9]{10}">
+                                    </div>
+                                    <small class="form-help">Enter 10-digit Indian mobile number. Country code (+91) is automatically attached for WhatsApp orders.</small>
+                                </div>
+                                <div class="form-group">
+                                    <label for="set-email">Notification / Recipient Email</label>
+                                    <input type="email" id="set-email" required placeholder="orders@dryfruits.example">
+                                </div>
+                                <div class="form-group">
+                                    <label for="set-address">Store Physical Address</label>
+                                    <textarea id="set-address" rows="2" required></textarea>
+                                </div>
+                            </div>
+
+                            <!-- Trust Badges Customization Section -->
+                            <div class="admin-card-inner span-2" style="margin-top: 1rem;">
+                                <h4><i class="fa-solid fa-shield-halved"></i> Trust Bar Badges & Value Propositions</h4>
+                                <small class="form-help" style="display: block; margin-bottom: 1rem;">Customize the 4 value proposition badges displayed under the hero banner on the homepage.</small>
+                                
+                                <div class="trust-settings-grid">
+                                    <!-- Badge 1 -->
+                                    <div class="trust-setting-card">
+                                        <div class="card-badge-header">
+                                            <strong><i class="fa-solid fa-leaf"></i> Trust Badge 1</strong>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="set-tb1-icon">Badge Icon</label>
+                                            <select id="set-tb1-icon" class="sort-dropdown width-full">
+                                                <option value="fa-leaf">🍃 Organic Leaf (fa-leaf)</option>
+                                                <option value="fa-shield-halved">🛡️ Shield Security (fa-shield-halved)</option>
+                                                <option value="fa-truck-fast">🚚 Fast Shipping (fa-truck-fast)</option>
+                                                <option value="fa-headset">🎧 Support Headset (fa-headset)</option>
+                                                <option value="fa-award">🏆 Quality Award (fa-award)</option>
+                                                <option value="fa-rotate-left">🔄 Easy Returns (fa-rotate-left)</option>
+                                                <option value="fa-certificate">📜 Certified Pure (fa-certificate)</option>
+                                                <option value="fa-box-open">📦 Box Packaging (fa-box-open)</option>
+                                                <option value="fa-heart">❤️ Health & Care (fa-heart)</option>
+                                                <option value="fa-lock">🔒 Safe & Secure (fa-lock)</option>
+                                                <option value="fa-star">⭐ Top Rated (fa-star)</option>
+                                                <option value="fa-sun">☀️ Farm Fresh (fa-sun)</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="set-tb1-title">Headline *</label>
+                                            <input type="text" id="set-tb1-title" required placeholder="e.g. 100% Organic & Fresh">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="set-tb1-desc">Subtitle Description *</label>
+                                            <input type="text" id="set-tb1-desc" required placeholder="e.g. Directly sourced from orchards">
+                                        </div>
+                                    </div>
+
+                                    <!-- Badge 2 -->
+                                    <div class="trust-setting-card">
+                                        <div class="card-badge-header">
+                                            <strong><i class="fa-solid fa-shield-halved"></i> Trust Badge 2</strong>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="set-tb2-icon">Badge Icon</label>
+                                            <select id="set-tb2-icon" class="sort-dropdown width-full">
+                                                <option value="fa-leaf">🍃 Organic Leaf (fa-leaf)</option>
+                                                <option value="fa-shield-halved">🛡️ Shield Security (fa-shield-halved)</option>
+                                                <option value="fa-truck-fast">🚚 Fast Shipping (fa-truck-fast)</option>
+                                                <option value="fa-headset">🎧 Support Headset (fa-headset)</option>
+                                                <option value="fa-award">🏆 Quality Award (fa-award)</option>
+                                                <option value="fa-rotate-left">🔄 Easy Returns (fa-rotate-left)</option>
+                                                <option value="fa-certificate">📜 Certified Pure (fa-certificate)</option>
+                                                <option value="fa-box-open">📦 Box Packaging (fa-box-open)</option>
+                                                <option value="fa-heart">❤️ Health & Care (fa-heart)</option>
+                                                <option value="fa-lock">🔒 Safe & Secure (fa-lock)</option>
+                                                <option value="fa-star">⭐ Top Rated (fa-star)</option>
+                                                <option value="fa-sun">☀️ Farm Fresh (fa-sun)</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="set-tb2-title">Headline *</label>
+                                            <input type="text" id="set-tb2-title" required placeholder="e.g. Vacuum Sealed Packaging">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="set-tb2-desc">Subtitle Description *</label>
+                                            <input type="text" id="set-tb2-desc" required placeholder="e.g. Preserves crisp taste and nutrients">
+                                        </div>
+                                    </div>
+
+                                    <!-- Badge 3 -->
+                                    <div class="trust-setting-card">
+                                        <div class="card-badge-header">
+                                            <strong><i class="fa-solid fa-truck-fast"></i> Trust Badge 3</strong>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="set-tb3-icon">Badge Icon</label>
+                                            <select id="set-tb3-icon" class="sort-dropdown width-full">
+                                                <option value="fa-leaf">🍃 Organic Leaf (fa-leaf)</option>
+                                                <option value="fa-shield-halved">🛡️ Shield Security (fa-shield-halved)</option>
+                                                <option value="fa-truck-fast">🚚 Fast Shipping (fa-truck-fast)</option>
+                                                <option value="fa-headset">🎧 Support Headset (fa-headset)</option>
+                                                <option value="fa-award">🏆 Quality Award (fa-award)</option>
+                                                <option value="fa-rotate-left">🔄 Easy Returns (fa-rotate-left)</option>
+                                                <option value="fa-certificate">📜 Certified Pure (fa-certificate)</option>
+                                                <option value="fa-box-open">📦 Box Packaging (fa-box-open)</option>
+                                                <option value="fa-heart">❤️ Health & Care (fa-heart)</option>
+                                                <option value="fa-lock">🔒 Safe & Secure (fa-lock)</option>
+                                                <option value="fa-star">⭐ Top Rated (fa-star)</option>
+                                                <option value="fa-sun">☀️ Farm Fresh (fa-sun)</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="set-tb3-title">Headline *</label>
+                                            <input type="text" id="set-tb3-title" required placeholder="e.g. Fast Doorstep Delivery">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="set-tb3-desc">Subtitle Description *</label>
+                                            <input type="text" id="set-tb3-desc" required placeholder="e.g. Hassle-free shipping & tracking">
+                                        </div>
+                                    </div>
+
+                                    <!-- Badge 4 -->
+                                    <div class="trust-setting-card">
+                                        <div class="card-badge-header">
+                                            <strong><i class="fa-solid fa-headset"></i> Trust Badge 4</strong>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="set-tb4-icon">Badge Icon</label>
+                                            <select id="set-tb4-icon" class="sort-dropdown width-full">
+                                                <option value="fa-leaf">🍃 Organic Leaf (fa-leaf)</option>
+                                                <option value="fa-shield-halved">🛡️ Shield Security (fa-shield-halved)</option>
+                                                <option value="fa-truck-fast">🚚 Fast Shipping (fa-truck-fast)</option>
+                                                <option value="fa-headset">🎧 Support Headset (fa-headset)</option>
+                                                <option value="fa-award">🏆 Quality Award (fa-award)</option>
+                                                <option value="fa-rotate-left">🔄 Easy Returns (fa-rotate-left)</option>
+                                                <option value="fa-certificate">📜 Certified Pure (fa-certificate)</option>
+                                                <option value="fa-box-open">📦 Box Packaging (fa-box-open)</option>
+                                                <option value="fa-heart">❤️ Health & Care (fa-heart)</option>
+                                                <option value="fa-lock">🔒 Safe & Secure (fa-lock)</option>
+                                                <option value="fa-star">⭐ Top Rated (fa-star)</option>
+                                                <option value="fa-sun">☀️ Farm Fresh (fa-sun)</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="set-tb4-title">Headline *</label>
+                                            <input type="text" id="set-tb4-title" required placeholder="e.g. WhatsApp Support">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="set-tb4-desc">Subtitle Description *</label>
+                                            <input type="text" id="set-tb4-desc" required placeholder="e.g. Instant orders & inquiry assistance">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="settings-form-footer span-2">
+                                <button type="submit" class="btn btn-primary btn-lg">
+                                    <i class="fa-solid fa-floppy-disk"></i> Save All Site Settings
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- TAB 5: Inquiries / Orders Log -->
+                    <div id="tab-inquiries" class="tab-pane">
+                        <div class="pane-action-bar">
+                            <div class="search-filter-wrap">
+                                <select id="inquiry-status-filter" class="sort-dropdown">
+                                    <option value="all">All Inquiry Statuses</option>
+                                    <option value="Pending">Pending</option>
+                                    <option value="Contacted">Contacted</option>
+                                    <option value="Completed">Completed</option>
+                                    <option value="Cancelled">Cancelled</option>
+                                </select>
+                            </div>
+                            <button id="clear-all-inquiries-btn" class="btn btn-ghost-danger">
+                                <i class="fa-solid fa-trash-can"></i> Clear History
+                            </button>
+                        </div>
+
+                        <div class="table-responsive">
+                            <table class="admin-table">
+                                <thead>
+                                    <tr>
+                                        <th>Date & ID</th>
+                                        <th>Customer Details</th>
+                                        <th>Order Items Summary</th>
+                                        <th>Total</th>
+                                        <th>Channel</th>
+                                        <th>Status</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="admin-inquiries-table-body">
+                                    <!-- Injected via JS -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- TAB 6: Image Assets Gallery & Management -->
+                    <div id="tab-gallery" class="tab-pane">
+                        <div class="pane-action-bar">
+                            <div class="search-filter-wrap" style="flex: 1; display: flex; gap: 0.75rem; align-items: center; flex-wrap: wrap;">
+                                <input type="text" id="gallery-search" placeholder="Search image assets by filename or path..." class="admin-search-input" style="flex: 1; min-width: 260px;">
+                                <select id="gallery-type-filter" class="sort-dropdown">
+                                    <option value="all">All Image Categories</option>
+                                    <option value="products">Product Images (images/products/)</option>
+                                    <option value="banners">Banner Slides (images/banners/)</option>
+                                    <option value="logos">Brand Logos (images/logos/)</option>
+                                    <option value="custom">Uploaded Base64 Assets</option>
+                                </select>
+                            </div>
+                            <div class="action-bar-right">
+                                <span id="gallery-asset-count" class="badge-tag" style="padding: 0.55rem 0.85rem; font-size: 0.85rem;">
+                                    <i class="fa-solid fa-photo-film"></i> Total: <strong id="gallery-count-val">0</strong> Images
+                                </span>
+                            </div>
+                        </div>
+
+                        <div id="admin-gallery-grid" class="gallery-asset-grid">
+                            <!-- Injected via JS -->
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Product Edit/Add Form Modal -->
+    <div id="product-modal" class="modal-backdrop hidden" role="dialog" aria-modal="true">
+        <div class="modal-card product-form-card">
+            <button class="modal-close-btn" id="product-modal-close"><i class="fa-solid fa-xmark"></i></button>
+            <div class="modal-header-wrap">
+                <h3 id="prod-modal-title"><i class="fa-solid fa-box-open"></i> Add New Product</h3>
+            </div>
+
+            <form id="product-crud-form" class="product-crud-form">
+                <input type="hidden" id="prod-edit-id">
+
+                <div class="modal-grid-layout">
+                    <!-- Left Column: Media Upload, Image Rename & Preview -->
+                    <div class="modal-media-col">
+                        <div class="media-box-header">
+                            <h4><i class="fa-solid fa-image"></i> Product Image Asset</h4>
+                            <span class="badge-tag">Upload or Select</span>
+                        </div>
+
+                        <!-- Live Preview Card -->
+                        <div class="image-preview-container">
+                            <img id="prod-img-preview" src="images/products/default_product.jpg" alt="Product Image Preview" onerror="this.src='images/products/default_product.jpg'">
+                            <span class="preview-badge"><i class="fa-solid fa-eye"></i> Live Preview</span>
+                        </div>
+                        <button type="button" id="prod-img-delete-btn" class="btn btn-sm btn-ghost-danger width-full" style="margin-top: 0.35rem;">
+                            <i class="fa-solid fa-trash-can"></i> Remove / Reset Image
+                        </button>
+
+                        <!-- Image File Upload Dropzone -->
+                        <div class="form-group">
+                            <label><i class="fa-solid fa-cloud-arrow-up"></i> Upload Image File</label>
+                            <div class="upload-dropzone" id="prod-dropzone">
+                                <i class="fa-solid fa-file-image upload-icon"></i>
+                                <div class="upload-text">
+                                    <strong>Click or drag & drop image file</strong>
+                                    <span>JPG, PNG, WEBP (Instant Live Preview)</span>
+                                </div>
+                                <input type="file" id="prod-file-input" accept="image/*" class="file-input-hidden">
+                            </div>
+                        </div>
+
+                        <!-- Admin Rename Image / Alias -->
+                        <div class="form-group">
+                            <label for="prod-image-name"><i class="fa-solid fa-signature"></i> Admin Image Rename / Alias</label>
+                            <div class="input-with-prefix">
+                                <span class="input-prefix">images/products/</span>
+                                <input type="text" id="prod-image-name" placeholder="almonds_custom.jpg">
+                            </div>
+                            <small class="form-help">Optionally rename/alias the file for clean catalog organization.</small>
+                        </div>
+
+                        <!-- Direct Image Path / URL -->
+                        <div class="form-group">
+                            <label for="prod-image"><i class="fa-solid fa-link"></i> Full Image Path or Data URL *</label>
+                            <input type="text" id="prod-image" required placeholder="images/products/almonds.jpg">
+                        </div>
+                    </div>
+
+                    <!-- Right Column: Product Details & Specs -->
+                    <div class="modal-details-col">
+                        <div class="form-row">
+                            <div class="form-group span-2">
+                                <label for="prod-title">Product Title *</label>
+                                <input type="text" id="prod-title" required placeholder="e.g. Premium California Almonds">
+                            </div>
+                            <div class="form-group">
+                                <label for="prod-category">Category *</label>
+                                <select id="prod-category" required class="sort-dropdown width-full">
+                                    <!-- Populated dynamically -->
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="prod-base-price">Base Price (₹) *</label>
+                                <input type="number" id="prod-base-price" step="1" min="1" required placeholder="180">
+                            </div>
+                            <div class="form-group">
+                                <label for="prod-base-weight">Base Weight (grams) *</label>
+                                <select id="prod-base-weight" required class="sort-dropdown width-full">
+                                    <option value="100">100g</option>
+                                    <option value="250" selected>250g</option>
+                                    <option value="500">500g</option>
+                                    <option value="1000">1kg (1000g)</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="prod-stock">Stock Availability *</label>
+                                <select id="prod-stock" required class="sort-dropdown width-full">
+                                    <option value="in_stock">In Stock</option>
+                                    <option value="out_of_stock">Out of Stock</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="prod-desc">Description *</label>
+                            <textarea id="prod-desc" rows="3" required placeholder="Handpicked premium almonds packed with essential nutrient minerals..."></textarea>
+                        </div>
+
+                        <fieldset class="specs-fieldset">
+                            <legend><i class="fa-solid fa-chart-pie"></i> Nutritional Specifications (Per 100g)</legend>
+                            <div class="form-row grid-5">
+                                <div class="form-group">
+                                    <label for="spec-calories">Calories</label>
+                                    <input type="text" id="spec-calories" placeholder="579 kcal">
+                                </div>
+                                <div class="form-group">
+                                    <label for="spec-protein">Protein</label>
+                                    <input type="text" id="spec-protein" placeholder="21.2g">
+                                </div>
+                                <div class="form-group">
+                                    <label for="spec-carbs">Carbs</label>
+                                    <input type="text" id="spec-carbs" placeholder="21.7g">
+                                </div>
+                                <div class="form-group">
+                                    <label for="spec-fat">Fat</label>
+                                    <input type="text" id="spec-fat" placeholder="49.9g">
+                                </div>
+                                <div class="form-group">
+                                    <label for="spec-fiber">Fiber</label>
+                                    <input type="text" id="spec-fiber" placeholder="12.5g">
+                                </div>
+                            </div>
+                        </fieldset>
+
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary btn-lg"><i class="fa-solid fa-floppy-disk"></i> Save Product</button>
+                            <button type="button" id="prod-form-cancel" class="btn btn-ghost btn-lg">Cancel</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Slide Edit/Add Form Modal -->
+    <div id="slide-modal" class="modal-backdrop hidden" role="dialog" aria-modal="true">
+        <div class="modal-card slide-form-card">
+            <button class="modal-close-btn" id="slide-modal-close"><i class="fa-solid fa-xmark"></i></button>
+            <div class="modal-header-wrap">
+                <h3 id="slide-modal-title"><i class="fa-solid fa-image"></i> Add Hero Slide</h3>
+            </div>
+
+            <form id="slide-crud-form">
+                <input type="hidden" id="slide-edit-id">
+
+                <div class="modal-grid-layout">
+                    <!-- Left Column: Live Slide Banner Preview & Media Upload -->
+                    <div class="modal-media-col">
+                        <div class="media-box-header">
+                            <h4><i class="fa-solid fa-sliders"></i> Hero Slide Live Preview</h4>
+                            <span class="badge-tag">Interactive</span>
+                        </div>
+
+                        <!-- Live Banner Preview Card -->
+                        <div class="slide-preview-banner" id="slide-preview-banner">
+                            <img id="slide-img-preview" src="images/banners/default_banner.jpg" alt="Slide Banner Preview" onerror="this.src='images/banners/default_banner.jpg'">
+                            <div class="slide-preview-overlay">
+                                <span class="slide-preview-badge" id="slide-preview-badge-text"><i class="fa-solid fa-sparkles"></i> FRESH HARVEST</span>
+                                <h4 class="slide-preview-title" id="slide-preview-title-text">Slide Headline Preview</h4>
+                                <p class="slide-preview-subtitle" id="slide-preview-subtitle-text">Subtitle description goes here...</p>
+                                <span class="slide-preview-btn" id="slide-preview-btn-text">Explore Selection</span>
+                            </div>
+                        </div>
+                        <button type="button" id="slide-img-delete-btn" class="btn btn-sm btn-ghost-danger width-full" style="margin-top: 0.35rem;">
+                            <i class="fa-solid fa-trash-can"></i> Remove / Reset Banner Image
+                        </button>
+
+                        <!-- Slide File Upload Dropzone -->
+                        <div class="form-group" style="margin-top: 1rem;">
+                            <label><i class="fa-solid fa-cloud-arrow-up"></i> Upload Slide Image File</label>
+                            <div class="upload-dropzone" id="slide-dropzone">
+                                <i class="fa-solid fa-file-image upload-icon"></i>
+                                <div class="upload-text">
+                                    <strong>Click or drag & drop banner image</strong>
+                                    <span>High resolution (Instant Live Preview)</span>
+                                </div>
+                                <input type="file" id="slide-file-input" accept="image/*" class="file-input-hidden">
+                            </div>
+                        </div>
+
+                        <!-- Admin Rename Slide Image / Alias -->
+                        <div class="form-group">
+                            <label for="slide-image-name"><i class="fa-solid fa-signature"></i> Admin Slide Image Rename / Alias</label>
+                            <div class="input-with-prefix">
+                                <span class="input-prefix">images/banners/</span>
+                                <input type="text" id="slide-image-name" placeholder="banner_custom.jpg">
+                            </div>
+                            <small class="form-help">Optionally rename/alias banner filename.</small>
+                        </div>
+
+                        <!-- Direct Slide Image Path / URL -->
+                        <div class="form-group">
+                            <label for="slide-image"><i class="fa-solid fa-link"></i> Full Image Path or Data URL *</label>
+                            <input type="text" id="slide-image" required placeholder="images/banners/banner1.jpg">
+                        </div>
+                    </div>
+
+                    <!-- Right Column: Content & Controls -->
+                    <div class="modal-details-col">
+                        <div class="form-group">
+                            <label for="slide-title">Main Headline Title *</label>
+                            <input type="text" id="slide-title" required placeholder="e.g. Premium Gourmet Dry Fruits & Nuts">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="slide-badge">Badge Tag Text</label>
+                            <input type="text" id="slide-badge" placeholder="e.g. FRESH HARVEST 2026">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="slide-subtitle">Subtitle Description</label>
+                            <textarea id="slide-subtitle" rows="3" placeholder="e.g. Handpicked from natural orchards around the world. 100% Organic, Raw & Pure."></textarea>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="slide-cta-text">Button CTA Text</label>
+                                <input type="text" id="slide-cta-text" placeholder="Explore Selection">
+                            </div>
+                            <div class="form-group">
+                                <label for="slide-cta-link">Button Anchor Link</label>
+                                <input type="text" id="slide-cta-link" placeholder="#catalog-section">
+                            </div>
+                        </div>
+
+                        <div class="form-actions" style="margin-top: 1.5rem;">
+                            <button type="submit" class="btn btn-primary btn-lg"><i class="fa-solid fa-floppy-disk"></i> Save Slide</button>
+                            <button type="button" id="slide-form-cancel" class="btn btn-ghost btn-lg">Cancel</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+    <!-- Toast Notification Container -->
+    <div id="toast-container" class="toast-container"></div>
+
+    <!-- Application Script -->
+    <script src="app.js"></script>
+</body>
+</html>
